@@ -21,5 +21,11 @@ c : Array(Array(Int32)) = [
     [-1, 2, 3]
 ]
 
-puts sum_matrix a, b, c
+ab = sum_matrix a, b
 
+print_matrix ab
+print_matrix c
+
+abc =  sub_matrix ab, c
+
+print_matrix abc
