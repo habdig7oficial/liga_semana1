@@ -21,11 +21,19 @@ c : Array(Array(Int32)) = [
     [-1, 2, 3]
 ]
 
-ab = sum_matrix a, b
-
-print_matrix ab
+puts "A: "
+print_matrix a
+puts "B: "
+print_matrix b
+puts "C: "
 print_matrix c
 
-abc =  sub_matrix ab, c
+puts "-----------------"
 
+ab = sum_matrix a, b
+puts "A + B = "
+print_matrix ab
+
+abc =  sub_matrix ab, c
+puts "A + B - C: "
 print_matrix abc
