@@ -2,20 +2,20 @@ require "./lib.cr"
 
 include MatrixLib
 
-a : Array(Array(Int32)) = [
+a : MatrixInt32 = [
     [2, 1, 4],
     [3, 0, -1],
     [5, 2, 3]
 ]
 
 
-b : Array(Array(Int32)) = [
+b : MatrixInt32 = [
     [-1, 3, 2],
     [4, 1, 0],
     [2, -2, 1]
 ]
 
-c : Array(Array(Int32)) = [
+c : MatrixInt32 = [
     [3, 1, 2],
     [0, -2, 4],
     [-1, 2, 3]

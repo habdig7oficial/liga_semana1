@@ -1,5 +1,6 @@
 module MatrixLib
-    def print_matrix(matrix : Array(Array(Int32)))
+    alias MatrixInt32 = Array(Array(Int32))
+    def print_matrix(matrix : MatrixInt32)
         matrix.each do | line |
             print "| "
             line.each do | element |
@@ -11,8 +12,8 @@ module MatrixLib
     end    
 
 
-    def sum_matrix(*args : Array(Array(Int32))) : Array(Array(Int32))
-        res : Array(Array(Int32)) = Array(Array(Int32)).new(args[0].size) { Array(Int32).new(args[0][0].size) {0} }
+    def sum_matrix(*args : MatrixInt32) : MatrixInt32
+        res : MatrixInt32 = MatrixInt32.new(args[0].size) { Array(Int32).new(args[0][0].size) {0} }
         args.each do | matrix | 
             matrix.each_with_index do | line, i |
                 line.each_with_index do | element, j |
@@ -23,8 +24,8 @@ module MatrixLib
         return res
     end
 
-    def sub_matrix(*args : Array(Array(Int32))) : Array(Array(Int32))
-        res : Array(Array(Int32)) = args[0]
+    def sub_matrix(*args : MatrixInt32) : MatrixInt32
+        res : MatrixInt32 = args[0]
         args[1..-1].each do | matrix |
             matrix.each_with_index do | line, i |
                 line.each_with_index do | element, j |
@@ -35,8 +36,8 @@ module MatrixLib
         return res
     end
 
-    def mul_matrix(*args : Array(Array(Int32))) : Array(Array(Int32))
-        res : Array(Array(Int32)) = Array(Array(Int32)).new(args[0].size) { Array(Int32).new(args[0][0].size) {1} }
+    def mul_matrix(*args : MatrixInt32) : MatrixInt32
+        res : MatrixInt32 = MatrixInt32.new(args[0].size) { Array(Int32).new(args[0][0].size) {1} }
         puts res
         args.each_with_index do | matrix, index | 
             matrix.each_with_index do | line, i |
