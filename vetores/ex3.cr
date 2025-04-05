@@ -3,8 +3,13 @@ require "./lib.cr"
 include VectorLib
 
 
-a : VectorInt32 = {3, -2}
-b : VectorInt32 = {-1, 4}
+def v_ex3
+    a : VectorInt32 = {3, -2}
+    b : VectorInt32 = {-1, 4}
 
 
-puts sum_vec a, b
+    res = sum_vec a, b
+    puts res 
+    return res
+end
+v_ex3

@@ -2,10 +2,11 @@ require "./lib.cr"
 
 include VectorLib
 
-v : VectorInt32 = {6, 8}
+def v_ex1
+    v : VectorInt32 = {6, 8}
+    res = vec_module v
+    puts res
+    return res
+end
 
-
-puts vec_module v
-
-puts cos 1.5708
-
+v_ex1
